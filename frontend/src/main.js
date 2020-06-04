@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import routes from './routes'
+import Vue from 'vue'
+import VueSidebarMenu from 'vue-sidebar-menu'
+import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 
 const app = new Vue({
   el: '#app',
@@ -18,6 +21,7 @@ const app = new Vue({
     return h(this.ViewComponent)
   }
 })
+
 
 window.addEventListener('popstate', () => {
   app.currentRoute = window.location.pathname

@@ -1,0 +1,5 @@
+backendvenv\Scripts\activate
+
+python -m pip install Django
+
+py manage.py runserver

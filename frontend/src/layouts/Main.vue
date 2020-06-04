@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <ul>
+      <h1>Titulo</h1>
       <li>
         <v-link href="/">Home</v-link>
         <v-link href="/about">About</v-link>
@@ -26,6 +27,6 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 15px 30px;
-    background: #f9f7f5;
+    background: red;
   }
 </style>
