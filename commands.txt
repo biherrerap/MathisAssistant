@@ -1,4 +1,4 @@
-#backendvenv\Scripts\activate
+backendvenv\Scripts\activate
 
 python -m pip install Django
 
