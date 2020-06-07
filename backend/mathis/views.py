@@ -4,8 +4,9 @@ from django.http import HttpResponse
 from .models import Team
 
 def index(request):
-    teams = Team.objects
-    return HttpResponse("Hello, world. You're at the mathis index.")
+    team_list = Team.objects.all()
+    #output = ', '.join([q for q in team_list])
+    return HttpResponse(team_list)
 
 def detail(request, team_id):
     return HttpResponse("You're looking at team %s." % team_id)
@@ -16,4 +17,4 @@ def name(request, team_id):
 '''
 def vote(request, team_id):
     return HttpResponse("You're voting on question %s." % team_id)
-    '''
+    ''' 
