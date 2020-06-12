@@ -1,13 +1,62 @@
 import React from 'react';
 import '../Styles/TeamStyles.scss';
+import TournamentList from '../Components/Teams/Tournaments'
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
+import Card from 'react-bootstrap/Card';
 
 
 export default class Team extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            storeList:[
+                {
+                    edition: '1',
+                    champion: 'Real Madrid',
+                    second: 'Barcelona',
+                    placement: 'Semifinals'
+                },
+                {
+                    edition: '2',
+                    champion: 'Real Madrid',
+                    second: 'Barcelona',
+                    placement: 'Semifinals'
+                },
+                {
+                    edition: '3',
+                    champion: 'Real Madrid',
+                    second: 'Barcelona',
+                    placement: 'Semifinals'
+                }
+            ]
+        }
+    }
+
+    displayStores(){ 
+        return this.state.storeList.map( (item,key) => {
+          return(
+            <Col lg={4} md={4} sm={12}>
+                <Card style={{ width: '100%',}}>
+                    <Container className="card-champion">
+                          <h1>{item.edition}</h1>
+                          <h1>.............</h1>
+                          <Card.Img className="card-shield" variant="top" src="https://i.pinimg.com/originals/4e/87/0c/4e870c6d61be9306bd9681554b0df83d.png" />
+                   </Container>
+                        <Card.Body>
+                             <Card.Title>{item.edition}</Card.Title>
+                            <Card.Text>
+                                {item.placement}
+                            </Card.Text>
+                            <Button variant="primary">{item.champion}</Button>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            )
+        })} 
 
     render() {
         return(
@@ -56,6 +105,11 @@ export default class Team extends React.Component{
                                 <Button className="options-button">
                                     Partidos
                                 </Button>
+                            </Container>
+                            <Container>
+                                <Row>
+                                {this.displayStores()};
+                                </Row>
                             </Container>
                             <br></br>
                             <br></br>
