@@ -1,4 +1,43 @@
-.card-team{
-    background-color: grey;
+.main{
+    padding-top: 1.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
 }
 
+.container-info-team{
+    box-sizing:border-box;
+    min-height: 38.5em;
+    max-height: 40em;
+    background-color: white;
+    border-radius: 2.5%;
+    box-shadow: 0 4px 14px 3px rgba(0, 0, 0, 0.2);
+    padding: 1%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 0;
+}
+
+.big-container-info-team{
+    box-sizing: border-box;
+    max-height: 38.5em;
+    background-color: white;
+    border-radius: 2.5%;
+    box-shadow: 0 4px 14px 3px rgba(0, 0, 0, 0.2);
+    padding: 3%;
+}
+
+.col-left{
+    padding-right: 0;
+}
+
+.col-right{
+    padding-left: 0;
+}
+
+.shield-container{
+    background-color: red;;
+    max-height: 38em;
+    max-width: 150px;
+    border-radius: 50%;
+    box-shadow: 7px 5px 14px 3px rgba(0, 0, 0, 0.2);
+}

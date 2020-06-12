@@ -5,7 +5,9 @@
  import Team from './Pages/Team'
  import  Cup from './Pages/Cup'
  import './Styles/App.scss';
- 
+ import './Styles/TeamStyles.scss';
+ import './Styles/App.scss';
+
  class App extends React.Component{
    
    render(){
