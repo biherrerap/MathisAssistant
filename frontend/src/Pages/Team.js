@@ -103,7 +103,9 @@ export default class Team extends React.Component{
                             </Container>
                             <Container>
                                 <Row>
+                            
                                 {this.displayStores()};
+                                
                                 </Row>
                             </Container>
                             <br></br>

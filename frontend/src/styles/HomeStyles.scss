@@ -1,3 +1,32 @@
 #main{
     background-color: red;
 }
+
+.nav-container{
+    margin-top: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-family: 'montserrat','sans-serif';
+}
+
+.bg-light {
+    background-color: #ffffff!important;
+}
+
+.navbar-collapse{
+    justify-content: flex-end !important;
+}
+
+.form-search-home{
+    border-radius: 20px !important;
+    border-color: transparent;
+}
+
+#button-search-home{
+    margin-left: -18%;
+    color: grey;
+    border-color: transparent;
+    &:hover{
+        background: transparent;
+    }
+}
