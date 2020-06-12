@@ -6,12 +6,12 @@
 
 .container-info-team{
     box-sizing:border-box;
-    min-height: 38.5em;
-    max-height: 40em;
+    min-width: 30em;
+    max-height: 38.5em;
     background-color: white;
-    border-radius: 2.5%;
+    border-radius: 5%;
     box-shadow: 0 4px 14px 3px rgba(0, 0, 0, 0.2);
-    padding: 1%;
+    padding: 5%;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     padding-right: 0;
@@ -20,8 +20,8 @@
 .big-container-info-team{
     box-sizing: border-box;
     max-height: 38.5em;
-    background-color: white;
-    border-radius: 2.5%;
+    background-color: #171738;
+    border-radius: 5%;
     box-shadow: 0 4px 14px 3px rgba(0, 0, 0, 0.2);
     padding: 3%;
 }
@@ -32,6 +32,16 @@
 
 .col-right{
     padding-left: 0;
+}
+
+.options-teams{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.options-button{
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 150%;
 }
 
 .shield-container{

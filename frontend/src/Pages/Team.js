@@ -3,6 +3,8 @@ import '../Styles/TeamStyles.scss';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+
 
 export default class Team extends React.Component{
 
@@ -42,7 +44,14 @@ export default class Team extends React.Component{
                     </Col>
                     <Col lg={8} md={8} className="col-right">
                         <Container className="big-container-info-team">
-                            <a>Hola</a>
+                            <Container className="options-teams">
+                                <Button className="options-button">
+                                    Torneos
+                                </Button>
+                                <Button className="options-button">
+                                    Partidos
+                                </Button>
+                            </Container>
                             <br></br>
                             <br></br>
                             <br></br>
