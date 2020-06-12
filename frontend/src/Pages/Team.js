@@ -41,18 +41,13 @@ export default class Team extends React.Component{
           return(
             <Col lg={4} md={4} sm={12}>
                 <Card style={{ width: '100%',}}>
-                    <Container className="card-champion">
+                    <Container className="card-header">
                           <h1>{item.edition}</h1>
-                          <h1>.............</h1>
                           <Card.Img className="card-shield" variant="top" src="https://i.pinimg.com/originals/4e/87/0c/4e870c6d61be9306bd9681554b0df83d.png" />
                    </Container>
-                        <Card.Body>
-                             <Card.Title>{item.edition}</Card.Title>
-                            <Card.Text>
-                                {item.placement}
-                            </Card.Text>
-                            <Button variant="primary">{item.champion}</Button>
-                        </Card.Body>
+                            <Container className="tournament-card">
+                                <p>Semifinals</p>
+                            </Container>
                     </Card>
                 </Col>
             )

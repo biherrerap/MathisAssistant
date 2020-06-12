@@ -36,12 +36,20 @@
 
 .options-teams{
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5%;
 }
 
 .options-button{
     background-color: transparent;
     border-color: transparent;
     font-size: 150%;
+    &:hover{
+        transform:translatey(-5px);
+        background-color: transparent;
+        border-color: transparent;
+        border-bottom-color: white;
+        border-bottom-width: 100%;
+    }
 }
 
 .container-shield-team{
@@ -62,16 +70,32 @@
     color: #171738;
   }
 
-  .card-champion{
+  .card-header{
       background-color: transparent;
       display: flex;
       flex-direction: row;
     }
 .card-shield{
-    height: 5em;
+    height: 3em;
     width: auto;
+    margin-left: auto;
 }
 
 .card-full{
     border-radius: 10%
 }
+
+.card-champsub{
+    display: flex;
+    flex-direction: row;
+}
+
+.tournament-card{
+    text-align: center;
+    padding-top: 5%;
+}
+
+.card{
+    border-radius: 15% !important;
+}
+
