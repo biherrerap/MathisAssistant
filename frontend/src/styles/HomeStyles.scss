@@ -1,7 +1,21 @@
 //Colors used:
 
 $primary-color: #29527c;
+$light-color: #f7f7f9;
 
+//Fonts used:
+
+$montserrat: 'Montserrat';
+$lato: 'Lato';
+
+//Other styles:
+
+$border-radius: 20px;
+
+
+//image
+
+$bg-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-background-design_23-2148419781.jpg");
 .nav-container{
     margin-top: 2%;
     font-family: 'montserrat','sans-serif';
@@ -23,7 +37,7 @@ $primary-color: #29527c;
 }
 
 .form-search-home{
-    border-radius: 20px !important;
+    border-radius: $border-radius !important;
     border-color: transparent;
 }
 
@@ -38,17 +52,18 @@ $primary-color: #29527c;
 
 .home-menu{
     background-color: red;
-    max-height: 90%;
+    max-height: 35em;
 }
 
 .main-home-menu{
-    background-color: blue;
-    max-height: 90%;
+    background-color: white;
+    max-height: 35em;
 }
 
 .data-home-menu{
-    background-color: green;
-    max-height: 90%;
+    background-color: $light-color;
+    max-height: 35em;
+    border-radius: $border-radius;
 }
 
 .menu-item{
@@ -67,13 +82,16 @@ $primary-color: #29527c;
 
 .table-container{
     margin-top: 10%;
-    background-color: white;
-    border-radius: 10px;
+    background-color: $light-color;
+    border-radius: $border-radius;
     font-family: Lato;
+    margin-bottom: 10%;
+    padding-bottom: .5%;
+    padding-top: 3.5%;
 }
 
 table{
-    color: gray;
+    background-color: $light-color;
 }
 
 table .pos-col{
@@ -86,6 +104,7 @@ table .team-col{
     text-align: left;
     color: $primary-color;
 }
+
 table .points-col{
     max-width: 25px;
     text-align: center;
@@ -111,4 +130,44 @@ table .change-col{
     height: 26px;
     max-width: 15px;
     text-align: center;
+}
+
+.welcome{
+    //background-color: $primary-color;
+    background-image: $bg-img;
+    max-height: 125px;
+    border-radius: 20px;
+    padding: 6%;
+    font-family: $lato;
+    font-size: 200%;
+    color: white;
+}
+
+.statistic-container{
+    background-color: white;
+    border-radius: $border-radius;
+}
+
+.central-container{
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sc-right{
+    margin-left: 5%;
+}
+
+.right-col{
+    background-color: #f7f7f9;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: lato;
+    color: $primary-color;
+    max-height: 35em;
+    min-height: 35em;
 }

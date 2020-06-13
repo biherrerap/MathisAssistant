@@ -50,52 +50,49 @@ export default class Home extends React.Component{
                             <br></br>
                             <br></br>
                             <br></br>
-                            <br></br>    <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br> 
-                            <br></br>
+                            <br></br>   
+               
                         </Container>
                     </Col>
                     <Col lg={5} md={5}>
                         <Container className="main-home-menu">
-                            Let's go for a <FaBeer/>
+                           <Container className="welcome">
+                                Hi Brehynner!
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                           </Container>
                          <Container className="table-container">  
                             <Ranking/>
                           </Container>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br> 
+                         <Container fluid className="central-container">
+                            <Container className="statistic-container">
+                                Here goes more info
+                                <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                            </Container>
+                            <Container className="statistic-container sc-right">
+                                    Here goes more info
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                </Container>   
+                         </Container>                
                         </Container>
                     </Col>
                     <Col lg={4} md={4}>
-                        <Container className="data-home-menu">
-                            Let's go for a <FaBeer/>
+                        <Container className="data-home-menu right-col">
+                            <h1>Soon</h1>
                             <br></br>
                             <br></br>
                             <br></br>
@@ -119,8 +116,6 @@ export default class Home extends React.Component{
                             <br></br>
                             <br></br>
                             <br></br>
-                            <br></br>
-                            <br></br> 
                         </Container>
                     </Col>
                 </Row>
