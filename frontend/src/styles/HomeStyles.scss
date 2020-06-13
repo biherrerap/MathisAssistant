@@ -1,12 +1,17 @@
-#main{
-    background-color: red;
-}
+//Colors used:
+
+$primary-color: #29527c;
 
 .nav-container{
     margin-top: 2%;
+    font-family: 'montserrat','sans-serif';
     padding-left: 3%;
     padding-right: 3%;
-    font-family: 'montserrat','sans-serif';
+}
+
+.home-container{
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .bg-light {
@@ -29,4 +34,81 @@
     &:hover{
         background: transparent;
     }
+}
+
+.home-menu{
+    background-color: red;
+    max-height: 90%;
+}
+
+.main-home-menu{
+    background-color: blue;
+    max-height: 90%;
+}
+
+.data-home-menu{
+    background-color: green;
+    max-height: 90%;
+}
+
+.menu-item{
+    display: flex;
+     background-color: lightblue; 
+     /* border-radius: 9px; */
+    vertical-align: center;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 10%
+}
+
+.home-ranking{
+    border-color: transparent;
+}
+
+.table-container{
+    margin-top: 10%;
+    background-color: white;
+    border-radius: 10px;
+    font-family: Lato;
+}
+
+table{
+    color: gray;
+}
+
+table .pos-col{
+    width: 25px;
+    text-align: left;
+    color: $primary-color;
+}
+table .team-col{
+    max-width: 30%;
+    text-align: left;
+    color: $primary-color;
+}
+table .points-col{
+    max-width: 25px;
+    text-align: center;
+    color: $primary-color;
+}
+
+table .change-col{
+    width: 25px;
+    text-align: right;
+    color: $primary-color;
+}
+
+.table-sm td, .table-sm th {
+    padding: 0.1rem;
+}
+
+.table-shield{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.shield-col{
+    height: 26px;
+    max-width: 15px;
+    text-align: center;
 }

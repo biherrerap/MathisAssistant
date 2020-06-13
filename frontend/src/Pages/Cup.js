@@ -4,11 +4,19 @@ import '../Styles/HomeStyles.scss';
 //import API_URL from '../Server';
 
 export default class Cup extends React.Component{
+    
+    list = [
+        {
+
+        }
+    ]
+
+    
 
     render() {
         return(
             <div>
-                <h1>You're looking at Cup</h1>
+                
             </div>
         )
     }
