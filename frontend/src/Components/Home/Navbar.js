@@ -15,7 +15,15 @@ export default class Tournaments extends React.Component{
     render() {
         return(
                 <Navbar bg="light" expand="lg">
-                    <Navbar.Brand href="#home">Mathis</Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                    <img
+                            src="https://image.flaticon.com/icons/svg/3069/3069113.svg"
+                            width="30"
+                            height="30"
+                            className="d-inline-block align-top"
+                            alt=""
+                        />
+                        <span id="ma-nav"> Ma</span><span id="this-nav">this</span></Navbar.Brand>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Form inline>
                         <FormControl  type="text" placeholder="Search" className="mr-sm-2 form-search-home" />

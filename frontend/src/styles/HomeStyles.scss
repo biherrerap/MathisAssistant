@@ -1,6 +1,8 @@
 //Colors used:
 
-$primary-color: #29527c;
+$primary-color: #184799;
+$orange: #ea904d;
+$secondary-color: #0071b7;
 $light-color: #f7f7f9;
 
 //Fonts used:
@@ -16,6 +18,20 @@ $border-radius: 20px;
 //image
 
 $bg-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-background-design_23-2148419781.jpg");
+$sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-background_23-2148434268.jpg");
+
+#ma-nav{
+    color: $primary-color;
+    font-weight: 500;
+    font-size: larger;
+}
+
+#this-nav{
+    color: $secondary-color;
+    font-weight: 500;
+    font-size: larger;
+}
+
 .nav-container{
     margin-top: 2%;
     font-family: 'montserrat','sans-serif';
@@ -51,8 +67,13 @@ $bg-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
 }
 
 .home-menu{
-    background-color: red;
+    background-color: white;
     max-height: 35em;
+    min-height: 35em;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .main-home-menu{
@@ -68,12 +89,38 @@ $bg-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
 
 .menu-item{
     display: flex;
-     background-color: lightblue; 
-     /* border-radius: 9px; */
+    flex-direction: row;
+    //background-color: lightblue;
     vertical-align: center;
-    /* justify-content: center; */
     align-items: center;
-    margin: 10%
+    margin: 5px;
+    border-radius: 10px;
+    font-family: $lato;
+    font-weight: 600;
+    color: lightgray;
+    padding: 5%;
+    &:hover{
+        color: $orange;
+    }
+}
+
+.menu-item-active{
+    display: flex;
+    flex-direction: row;
+    //background-color: lightblue;
+    vertical-align: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 10px;
+    font-family: $lato;
+    font-weight: 600;
+    color: white;
+    background-color: $primary-color;
+    padding: 5%;
+}
+
+.menu-option-text{
+    margin-left: 10%;
 }
 
 .home-ranking{
@@ -144,8 +191,9 @@ table .change-col{
 }
 
 .statistic-container{
-    background-color: white;
+    background-image: $light-color;
     border-radius: $border-radius;
+    background-size: auto;
 }
 
 .central-container{
@@ -161,13 +209,28 @@ table .change-col{
 }
 
 .right-col{
-    background-color: #f7f7f9;
-    border-radius: $border-radius;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-family: lato;
+    align-items: center;
+    background-color: $light-color;
+    border-radius: $border-radius;
+    background-size: auto;
+    font-family: $lato;
     color: $primary-color;
-    max-height: 35em;
-    min-height: 35em;
+}
+
+.statistic-container-left{
+    background-image: $bg-img;
+    border-radius: $border-radius;
+    background-size: auto;
+    color: white;
+    font-family: lato;
+    padding: 6%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h9{
+        margin-left: 169px;
+    }
 }

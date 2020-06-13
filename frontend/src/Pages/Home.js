@@ -5,8 +5,14 @@ import Navbar from '../Components/Home/Navbar'
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import { FaBeer } from 'react-icons/fa';
+import { RiArrowDropRightLine } from 'react-icons/ri';
+import { TiHomeOutline} from 'react-icons/ti';
+import { GiSoccerBall} from 'react-icons/gi';
+import { FaShieldAlt} from 'react-icons/fa';
+import { BsArrowRight} from 'react-icons/bs';
+
 import Nav from 'react-bootstrap/Nav';
+
 
 
 export default class Home extends React.Component{
@@ -22,36 +28,27 @@ export default class Home extends React.Component{
                     <Col lg={3} md={3}>
                         <Container className="home-menu">
                             <Nav  className="flex-column">
-                                <Nav.Item className="menu-item">
-                                    <Nav.Link>
-                                    <FaBeer/> <span>Home</span>
-                                    </Nav.Link>
-                                </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link href="/cup" className="menu-item">
-                                       <FaBeer/> <span>Tournaments</span>
+                                    <Nav.Link href="/" className="menu-item-active">
+                                      <TiHomeOutline/> <span  className="menu-option-text" >Home</span> <RiArrowDropRightLine/> 
+                                    </Nav.Link>
+                                </Nav.Item>                               
+                                <Nav.Item>
+                                    <Nav.Link href="/" className="menu-item">
+                                       <GiSoccerBall/> <span  className="menu-option-text" >Teams</span> 
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link className="menu-item">
-                                        <FaBeer/> Statistics
+                                        <FaShieldAlt/> <span  className="menu-option-text" >Tournaments</span>
                                     </Nav.Link>
                                 </Nav.Item>
                             </Nav>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>    <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>   
-               
+ 
+                            <Container className="statistic-container-left">
+                                <h4>More features</h4>
+                                <h9>Soon <BsArrowRight/></h9>
+                            </Container>
                         </Container>
                     </Col>
                     <Col lg={5} md={5}>
@@ -63,7 +60,7 @@ export default class Home extends React.Component{
                                 <br></br>
                                 <br></br>
                                 <br></br>
-                                <br></br>
+                                <br></br>  
                            </Container>
                          <Container className="table-container">  
                             <Ranking/>
