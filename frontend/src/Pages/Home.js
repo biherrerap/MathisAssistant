@@ -5,14 +5,11 @@ import Navbar from '../Components/Home/Navbar'
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import { RiArrowDropRightLine } from 'react-icons/ri';
-import { TiHomeOutline} from 'react-icons/ti';
-import { GiSoccerBall} from 'react-icons/gi';
-import { FaShieldAlt} from 'react-icons/fa';
+
 import { BsArrowRight} from 'react-icons/bs';
 
-import Nav from 'react-bootstrap/Nav';
 
+import LeftMenu from '../Components/Home/Menu'
 
 
 export default class Home extends React.Component{
@@ -27,24 +24,7 @@ export default class Home extends React.Component{
                 <Row>
                     <Col lg={3} md={3}>
                         <Container className="home-menu">
-                            <Nav  className="flex-column">
-                                <Nav.Item>
-                                    <Nav.Link href="/" className="menu-item-active">
-                                      <TiHomeOutline/> <span  className="menu-option-text" >Home</span> <RiArrowDropRightLine/> 
-                                    </Nav.Link>
-                                </Nav.Item>                               
-                                <Nav.Item>
-                                    <Nav.Link href="/" className="menu-item">
-                                       <GiSoccerBall/> <span  className="menu-option-text" >Teams</span> 
-                                    </Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link className="menu-item">
-                                        <FaShieldAlt/> <span  className="menu-option-text" >Tournaments</span>
-                                    </Nav.Link>
-                                </Nav.Item>
-                            </Nav>
- 
+                            <LeftMenu/>
                             <Container className="statistic-container-left">
                                 <h4>More features</h4>
                                 <h9>Soon <BsArrowRight/></h9>
