@@ -33,7 +33,7 @@ $sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
 }
 
 .nav-container{
-    margin-top: 2%;
+    margin-top: 1%;
     font-family: 'montserrat','sans-serif';
     padding-left: 3%;
     padding-right: 3%;
@@ -152,6 +152,10 @@ table .team-col{
     color: $primary-color;
 }
 
+table .prevp-col{
+    display: none;
+}
+
 table .points-col{
     max-width: 25px;
     text-align: center;
@@ -213,6 +217,7 @@ table .change-col{
     justify-content: center;
     align-items: center;
     background-color: $light-color;
+    background-size: cover;
     border-radius: $border-radius;
     background-size: auto;
     font-family: $lato;

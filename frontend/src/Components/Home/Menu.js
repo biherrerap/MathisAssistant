@@ -24,7 +24,7 @@ export default class Menu extends React.Component{
                 </Nav.Link>
             </Nav.Item>   
             <Nav.Item>
-                <Nav.Link className="menu-item">
+                <Nav.Link href="/ranking" className="menu-item">
                     <AiOutlineOrderedList/> <span  className="menu-option-text" >Ranking</span>
                 </Nav.Link>
             </Nav.Item>

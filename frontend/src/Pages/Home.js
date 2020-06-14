@@ -1,18 +1,47 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../Styles/HomeStyles.scss';
 import Ranking from '../Components/Home/Ranking'
 import Navbar from '../Components/Home/Navbar'
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-
 import { BsArrowRight} from 'react-icons/bs';
-
-
-import LeftMenu from '../Components/Home/Menu'
+import LeftMenu from '../Components/Home/Menu';
 
 
 export default class Home extends React.Component{
+
+    showRankingModal(){
+        const [show, setShow] = useState(false);
+        const handleClose = () => setShow(false);
+        const handleShow = () => setShow(true);
+
+    return (
+        <>
+        <Button variant="primary" onClick={handleShow}>
+            Launch demo modal
+        </Button>
+
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+                Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+                Save Changes
+            </Button>
+            </Modal.Footer>
+        </Modal>
+        </>
+    );
+    }
+        
 
     render() {
         return(

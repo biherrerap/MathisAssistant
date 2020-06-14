@@ -37,7 +37,7 @@ export default class Team extends React.Component{
     }
 
     displayStores(){ 
-        return this.state.storeList.map( (item,key) => {
+        return this.state.storeList.map( (item) => {
           return(
             <Col lg={4} md={4} sm={12}>
                 <Card style={{ width: '100%',}}>
@@ -102,10 +102,8 @@ export default class Team extends React.Component{
                                 </Button>
                             </Container>
                             <Container>
-                                <Row>
-                            
-                                {this.displayStores()};
-                                
+                                <Row>                            
+                                {this.displayStores()};                                
                                 </Row>
                             </Container>
                             <br></br>
