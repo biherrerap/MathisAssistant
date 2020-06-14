@@ -63,20 +63,30 @@ export default class Ranking extends React.Component{
 
     fillTable(){
         return this.state.rankingList.map( (item,key) => {
-            if(item.pos > 0 && item.pos < 8){
-                var color = '#E5FFE5';
-            }else if(item.type=='Groups'){
-                var color ='red';
+            if(parseInt(item.position) > 0 && parseInt(item.position) < 9){
+                var colorbg = 'green';
+            }
+            if(parseInt(item.position) > 8 && parseInt(item.position) < 17){
+                var colorbg = 'blue';
+            }
+            if(parseInt(item.position) > 16 && parseInt(item.position) < 25){
+                var colorbg = 'purple';
+            }
+            if(parseInt(item.position) > 24 && parseInt(item.position) < 33){
+                var colorbg = 'orange';
+            }
+            if(parseInt(item.position) > 32){
+                var colorbg = 'red';
             }
             return(
-                <tr style={{backgroundColor: color}} key={key}>
+                <tr key={key}>
                 <td className="pos-col">{item.position}</td>
                 <td className="shield-col"><img className="table-shield" src={item.shield}></img></td>
                 <td className="team-col">{item.team}</td>
                 <td className="prevp-col">{item.prev_points}</td>
                 <td className="points-col">{item.points}</td>
                 <td className="change-col"><TiEquals/></td>
-                <td className="change-col"><BsDot/></td>
+                <td className="change-col"><BsDot style = {{color: colorbg}}/></td>
                 </tr>
               )
           })

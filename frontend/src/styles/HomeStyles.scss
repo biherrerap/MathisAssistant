@@ -132,7 +132,7 @@ $sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
     background-color: $light-color;
     border-radius: $border-radius;
     font-family: Lato;
-    margin-bottom: 10%;
+    margin-bottom: 9%;
     padding-bottom: .5%;
     padding-top: 3.5%;
 }
@@ -163,7 +163,7 @@ table .points-col{
 }
 
 table .change-col{
-    width: 25px;
+    width: 1px;
     text-align: right;
     color: $primary-color;
 }
@@ -195,7 +195,7 @@ table .change-col{
 }
 
 .statistic-container{
-    background-image: $light-color;
+    background-color: $light-color;
     border-radius: $border-radius;
     background-size: auto;
 }
