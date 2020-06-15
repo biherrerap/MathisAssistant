@@ -78,7 +78,8 @@ $sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
 
 .main-home-menu{
     background-color: white;
-    max-height: 35em;
+    position: relative;
+    height: 35em;
 }
 
 .data-home-menu{
@@ -239,3 +240,4 @@ table .change-col{
         margin-left: 169px;
     }
 }
+

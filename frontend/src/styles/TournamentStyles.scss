@@ -1,0 +1,78 @@
+//Colors used:
+
+$primary-color: #184799;
+$orange: #ea904d;
+$secondary-color: #0071b7;
+$light-color: #f7f7f9;
+
+//Fonts used:
+
+$montserrat: 'Montserrat';
+$lato: 'Lato';
+
+//Other styles:
+
+$border-radius: 20px;
+
+
+//image
+
+$bg-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-background-design_23-2148419781.jpg");
+$sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-background_23-2148434268.jpg");
+
+
+
+.shield-col-group{
+    height: 25px;
+    width: 15px;
+    text-align: center;
+}
+
+table .team-col-group{
+    width: 30%;
+    text-align: left;
+    color: $primary-color;
+}
+
+table .change-col-group{
+    width: 1px;
+    text-align: right;
+    color: $primary-color;
+}
+
+
+table .pts-col-group{
+    width: 1px;
+    text-align: right;
+    color: $primary-color;
+    font-weight: bold;
+}
+
+table .pos-col-group{
+    width: 10px;
+    text-align: left;
+    color: #184799;
+}
+
+.table-container-group{
+        margin-top: 5%;
+        background-color: #f7f7f9;
+        border-radius: 20px;
+        font-family: Lato;
+        margin-bottom: 5%;
+        padding-bottom: .5%;
+        padding-top: 3.5%;
+}
+
+.group-title{
+    color: $orange;
+}
+
+.main-menu-cup{
+    overflow: auto;
+    max-height: 100%;
+    &::-webkit-scrollbar {
+        display: none;
+}
+}
+

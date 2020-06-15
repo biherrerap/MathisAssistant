@@ -39,7 +39,7 @@ export default class Menu extends React.Component{
                 </Nav.Link>
             </Nav.Item>                            
             <Nav.Item>
-                <Nav.Link href="/" className="menu-item">
+                <Nav.Link href="/cup" className="menu-item">
                    <GiSoccerBall/> <span  className="menu-option-text" >Tournaments</span> 
                 </Nav.Link>
             </Nav.Item>

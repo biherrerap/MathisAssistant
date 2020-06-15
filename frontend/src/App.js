@@ -4,6 +4,7 @@
  import Home from './Pages/Home'
  import Team from './Pages/Team'
  import Cup from './Pages/Cup'
+ import Group from './Components/Tournaments/Group'
  import RankingPage from './Pages/RankingPage'
  import './Styles/App.scss';
  import './Styles/TeamStyles.scss';
@@ -21,6 +22,7 @@
               <Route exact path="/team" component={Team} />
               <Route exact path="/cup" component={Cup}/>
               <Route exact path="/ranking" component={RankingPage}/>
+              <Route exact path="/group" component={Group}/>
             </Switch>
           </BrowserRouter>
         </div>   

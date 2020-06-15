@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import '../Styles/HomeStyles.scss';
 import Ranking from '../Components/Home/Ranking'
+import Group from '../Components/Tournaments/Group'
 import Navbar from '../Components/Home/Navbar'
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
@@ -71,7 +72,7 @@ export default class Home extends React.Component{
                                 <br></br>
                                 <br></br>  
                            </Container>
-                         <Container className="table-container">  
+                          <Container className="table-container">  
                             <Ranking/>
                           </Container>
                          <Container fluid className="central-container">
