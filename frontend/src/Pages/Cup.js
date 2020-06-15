@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import '../Styles/HomeStyles.scss';
 import Group from '../Components/Tournaments/Group'
 import Navbar from '../Components/Home/Navbar'
+import Match from '../Components/Matches'
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -82,7 +83,7 @@ export default class Home extends React.Component{
                     </Col>
                     <Col lg={4} md={4}>
                         <Container className="data-home-menu right-col">
-                            <h1>Soon</h1>
+                            <Match/>
                             <br></br>
                             <br></br>
                             <br></br>
