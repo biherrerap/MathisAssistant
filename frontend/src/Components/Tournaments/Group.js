@@ -5,13 +5,14 @@ import Table from 'react-bootstrap/Table'
 import '../../Styles/HomeStyles.scss';
 import '../../Styles/TournamentStyles.scss';
 
-import { RiArrowDropRightLine } from 'react-icons/ri';
-import { TiHomeOutline} from 'react-icons/ti';
-import { GiSoccerBall} from 'react-icons/gi';
-import { FaShieldAlt} from 'react-icons/fa';
-import {AiOutlineOrderedList} from 'react-icons/ai';
-import {IoMdStats} from 'react-icons/io';
-import {IoIosSettings} from 'react-icons/io'
+import Match from '../Matches'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+
+import LeftMenu from '../Home/Menu';
+
+import { BsArrowRight} from 'react-icons/bs';
 
 //import Header from '../Header';
 //import API_URL from '../Server';
@@ -85,3 +86,4 @@ export default class Group extends React.Component{
     }
 }
 
+ 

@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import '../Styles/HomeStyles.scss';
+import '../Styles/TournamentStyles.scss';
 import Group from '../Components/Tournaments/Group'
+import Finals from '../Components/Tournaments/Finals'
 import Navbar from '../Components/Home/Navbar'
 import Match from '../Components/Matches'
 import Row from 'react-bootstrap/Row';
@@ -14,52 +16,11 @@ import LeftMenu from '../Components/Home/Menu';
 
 export default class Home extends React.Component{
 
-    showRankingModal(){
-        const [show, setShow] = useState(false);
-        const handleClose = () => setShow(false);
-        const handleShow = () => setShow(true);
 
-    return (
-        <>
-        <Button variant="primary" onClick={handleShow}>
-            Launch demo modal
-        </Button>
-
-        <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-            <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-                Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-                Save Changes
-            </Button>
-            </Modal.Footer>
-        </Modal>
-        </>
-    );
-    }   
-    render() {
+    saveStuff(){
         return(
             <div>
-            <Container fluid className="nav-container">
-                <Navbar></Navbar>
-            </Container>
-            <Container fluid  className="home-container">
-                <Row>
-                    <Col lg={3} md={3}>
-                        <Container className="home-menu">
-                            <LeftMenu/>
-                            <Container className="statistic-container-left">
-                                <h4>More features</h4>
-                                <h9>Soon <BsArrowRight/></h9>
-                            </Container>
-                        </Container>
-                    </Col>
-                    <Col lg={5} md={5}>
+                <Col lg={5} md={5}>
                         <Container className="main-home-menu">
                             <Container className="main-menu-cup">
                                     <h4 className="group-title">Group A</h4>
@@ -109,7 +70,34 @@ export default class Home extends React.Component{
                             <br></br>
                         </Container>
                     </Col>
-                </Row>
+            </div>
+        )
+    }
+
+
+    render() {
+        return(
+            <div>
+            <Container fluid className="nav-container">
+                <Navbar></Navbar>
+            </Container>
+            <Container fluid  className="home-container">
+            <Row>
+                    <Col lg={3} md={3}>
+                        <Container className="home-menu">
+                            <LeftMenu/>
+                            <Container className="statistic-container-left">
+                                <h4>More features</h4>
+                                <h9>Soon <BsArrowRight/></h9>
+                            </Container>
+                        </Container>
+                    </Col>
+                    <Col lg={8} md={8}>
+                        <Container className="tournament-big">
+                            <Finals/>
+                        </Container>
+                     </Col>
+            </Row>  
             </Container>
             </div>
         )

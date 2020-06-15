@@ -76,3 +76,33 @@ table .pos-col-group{
 }
 }
 
+.tournament-big{
+    background-color: $light-color;
+    position: relative;
+    border-radius: $border-radius;
+    height: 35em;
+}
+
+.cellf-container{
+    display: flex;
+    max-height: 30px;
+    font-family: Lato;
+    flex-direction: row;
+    /* max-width: 242px; */
+    max-width: 310px;
+    padding: 0%;
+    justify-items: center;
+    /* padding: 0px;*/
+}
+
+Col{
+    padding: 0;
+}
+
+.column-finals{
+    padding: 0;
+}
+
+.doublecell-container{
+    padding: 0;
+}
