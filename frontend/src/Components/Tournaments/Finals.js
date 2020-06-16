@@ -20,7 +20,7 @@ export default class Group extends React.Component{
         return(
             <Container fluid className="doublecell-container">
                 <Container className="cellf-container">
-                <Container fluid className="team-shield-cellf">
+                <Container className="team-shield-cellf">
                     <img className="table-shield" src="https://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/72.png"></img>
                     <span>Tottenham</span>
                 </Container>
@@ -48,12 +48,59 @@ export default class Group extends React.Component{
                 <Row>
                     <Col className="column-finals" lg={3} md={3}>
                         {this.cell()}
+                        {this.cell()}
+                        {this.cell()}
+                        {this.cell()}
+                        {this.cell()}
+                        {this.cell()}
+                        {this.cell()}
+                        {this.cell()}
                     </Col>
-                    <Col lg={3} md={3}>
+                    <Col className="column-finals" lg={3} md={3}>
+                        <br></br>
+                        {this.cell()}
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        {this.cell()}
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        {this.cell()}
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        {this.cell()}
                     </Col>
-                    <Col lg={3} md={3}>
+                    <Col className="column-finals" lg={3} md={3}>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        {this.cell()}
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        {this.cell()}
                     </Col>
-                    <Col lg={3} md={3}>
+                    <Col className="column-finals" lg={3} md={3}>
+                    <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        {this.cell()}
                     </Col>
                 </Row>
             </Container>
