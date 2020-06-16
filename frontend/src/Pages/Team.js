@@ -1,113 +1,75 @@
-import React from 'react';
-import '../Styles/TeamStyles.scss';
-import TournamentList from '../Components/Teams/Tournaments'
+import React,{useState} from 'react';
+import '../Styles/HomeStyles.scss';
+import Ranking from '../Components/Home/Ranking'
+import Group from '../Components/Tournaments/Group'
+import Navbar from '../Components/Home/Navbar'
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image';
-import Card from 'react-bootstrap/Card';
+import { BsArrowRight} from 'react-icons/bs';
+import LeftMenu from '../Components/Home/Menu';
 
 
-export default class Team extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            storeList:[
-                {
-                    edition: '1',
-                    champion: 'Real Madrid',
-                    second: 'Barcelona',
-                    placement: 'Semifinals'
-                },
-                {
-                    edition: '2',
-                    champion: 'Real Madrid',
-                    second: 'Barcelona',
-                    placement: 'Semifinals'
-                },
-                {
-                    edition: '3',
-                    champion: 'Real Madrid',
-                    second: 'Barcelona',
-                    placement: 'Semifinals'
-                }
-            ]
-        }
-    }
-
-    displayStores(){ 
-        return this.state.storeList.map( (item) => {
-          return(
-            <Col lg={4} md={4} sm={12}>
-                <Card style={{ width: '100%',}}>
-                    <Container className="card-header">
-                          <h1>{item.edition}</h1>
-                          <Card.Img className="card-shield" variant="top" src="https://i.pinimg.com/originals/4e/87/0c/4e870c6d61be9306bd9681554b0df83d.png" />
-                   </Container>
-                            <Container className="tournament-card">
-                                <p>Semifinals</p>
-                            </Container>
-                    </Card>
-                </Col>
-            )
-        })} 
+export default class Teams extends React.Component{ 
 
     render() {
         return(
-               <Container fluid className="main">
-                   <Row>
-                    <Col lg={4} md={4} className="col-left">
-                        <Container className="container-info-team">
-                            <Container className="container-shield-team">
-                                <Image className="shield" src="https://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/72.png" roundedCircle />
-                                <h1 id="team-name">Tottenham</h1>             
-                                <h4>4200</h4>                   
+            <div>
+            <Container fluid className="nav-container">
+                <Navbar></Navbar>
+            </Container>
+            <Container fluid  className="home-container">
+                <Row>
+                    <Col lg={3} md={3}>
+                        <Container className="home-menu">
+                            <LeftMenu/>
+                            <Container className="statistic-container-left">
+                                <h4>More features</h4>
+                                <h9>Soon <BsArrowRight/></h9>
                             </Container>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>                            
                         </Container>
                     </Col>
-                    <Col lg={8} md={8} className="col-right">
-                        <Container className="big-container-info-team">
-                            <Container className="options-teams">
-                                <Button className="options-button">
-                                    Torneos
-                                </Button>
-                                <Button className="options-button">
-                                    Partidos
-                                </Button>
+                    <Col lg={5} md={5}>
+                        <Container className="main-home-menu">
+                           <Container className="welcome">
+                                Hi Brehynner!
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>  
+                           </Container>
+                          <Container className="table-container">  
+                            <Ranking/>
+                          </Container>
+                         <Container fluid className="central-container">
+                            <Container className="statistic-container">
+                                Here goes more info
+                                <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
                             </Container>
-                            <Container>
-                                <Row>                            
-                                {this.displayStores()};                                
-                                </Row>
-                            </Container>
-                            <br></br>
-                            <br></br>
+                            <Container className="statistic-container sc-right">
+                                    Here goes more info
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                </Container>   
+                         </Container>                
+                        </Container>
+                    </Col>
+                    <Col lg={4} md={4}>
+                        <Container className="data-home-menu right-col">
+                            <h1>Soon</h1>
                             <br></br>
                             <br></br>
                             <br></br>
@@ -133,17 +95,10 @@ export default class Team extends React.Component{
                             <br></br>
                         </Container>
                     </Col>
-                   </Row>
-               </Container>
+                </Row>
+            </Container>
+            </div>
         )
     }
 }
-/*
-<div class="container-info-team">
-<div class="shield centralizer">
-    <div class="shield-container">
-    </div>
-</div>
-</div> 
 
-*/

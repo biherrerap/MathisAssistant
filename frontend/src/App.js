@@ -2,6 +2,7 @@
  import React from 'react';
  import {Route,Switch,BrowserRouter} from 'react-router-dom'
  import Home from './Pages/Home'
+ import Teams from './Pages/Teams'
  import Team from './Pages/Team'
  import Cup from './Pages/Cup'
  import Group from './Components/Tournaments/Group'
@@ -19,6 +20,7 @@
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/teams" component={Teams} />
               <Route exact path="/team" component={Team} />
               <Route exact path="/cup" component={Cup}/>
               <Route exact path="/ranking" component={RankingPage}/>
