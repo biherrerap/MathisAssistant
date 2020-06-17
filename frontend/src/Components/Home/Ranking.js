@@ -91,7 +91,7 @@ export default class Ranking extends React.Component{
               )
           })
     }
-
+  
     render() {
         return(
             <Table borderless className="home-raking" size="sm sm">

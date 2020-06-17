@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
 import '../Styles/HomeStyles.scss';
 import '../Styles/TournamentStyles.scss';
-import Group from '../Components/Tournaments/Group'
-import Finals from '../Components/Tournaments/Finals'
+import Group from '../Components/Tournaments/Group';
+import Finals from '../Components/Tournaments/Finals';
+import TournamentList from '../Components/Tournaments/List';
 import Navbar from '../Components/Home/Navbar'
 import Match from '../Components/Matches'
 import Row from 'react-bootstrap/Row';
@@ -17,9 +18,8 @@ import LeftMenu from '../Components/Home/Menu';
 export default class Home extends React.Component{
 
 
-    saveStuff(){
+    showGroups(){
         return(
-            <div>
                 <Col lg={5} md={5}>
                         <Container className="main-home-menu">
                             <Container className="main-menu-cup">
@@ -41,8 +41,13 @@ export default class Home extends React.Component{
                                     </Container>        
                             </Container>                           
                         </Container>
-                    </Col>
-                    <Col lg={4} md={4}>
+                    </Col>                   
+        )
+    }
+
+    showMatches(){
+        return(
+            <Col lg={4} md={4}>
                         <Container className="data-home-menu right-col">
                             <Match/>
                             <br></br>
@@ -70,8 +75,35 @@ export default class Home extends React.Component{
                             <br></br>
                         </Container>
                     </Col>
-            </div>
         )
+    }
+
+    showFinals(){
+        return(
+            <Col lg={9} md={9}>
+            <Container className="tournament-big">
+                <Finals/>
+            </Container>
+             </Col>
+        )
+    }
+
+    showTournamentList(){
+        return(
+            <Col lg={9} md={9}>
+            <Container className="tournament-big">
+                <TournamentList/>
+            </Container>
+             </Col>
+        )
+    }
+
+    groupsOrFinals(choice){
+        if(choice){
+            return <showGroups />
+        }else{
+            return <showFinals/>
+        }
     }
 
 
@@ -92,11 +124,7 @@ export default class Home extends React.Component{
                             </Container>
                         </Container>
                     </Col>
-                    <Col lg={8} md={8}>
-                        <Container className="tournament-big">
-                            <Finals/>
-                        </Container>
-                     </Col>
+                  {this.showGroups()}
             </Row>  
             </Container>
             </div>

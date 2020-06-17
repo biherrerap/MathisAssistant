@@ -1,18 +1,65 @@
-import React,{useState} from 'react';
+import React from 'react';
+
 import '../Styles/HomeStyles.scss';
+
 import Ranking from '../Components/Home/Ranking'
-import Group from '../Components/Tournaments/Group'
 import Navbar from '../Components/Home/Navbar'
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import LeftMenu from '../Components/Home/Menu';
+import Groups from '../Components/Tournaments/ShowGroups'
+import Matches from '../Components/Tournaments/MatchesCup'
+
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+
 import { BsArrowRight} from 'react-icons/bs';
-import LeftMenu from '../Components/Home/Menu';
 
 
 export default class Home extends React.Component{
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+
+        }
+    }
+
+    landingHomeCenter(){
+        return(
+                <Container className="main-home-menu">
+                    <Container className="welcome">
+                         Hi Brehynner!
+                    </Container>
+                    <Container className="table-container">  
+                        <Ranking/>
+                    </Container>
+                    <Container fluid className="central-container">
+                        <Container className="statistic-container">
+                            Here goes more info                                
+                        </Container>
+                        <Container className="statistic-container sc-right">
+                            Here goes more info  
+                        </Container>   
+                    </Container>                
+                </Container>
+        )
+    }
+
+    tournamentGroups(){
+        return(
+            <Groups/>
+        )
+    }
+
+    tournamentGroupMatches(){
+        return(
+            <Matches/>
+        )
+    }
+
+
+
     render() {
         return(
             <div>
@@ -31,49 +78,12 @@ export default class Home extends React.Component{
                         </Container>
                     </Col>
                     <Col lg={5} md={5}>
-                        <Container className="main-home-menu">
-                           <Container className="welcome">
-                                Hi Brehynner!
-                           </Container>
-                          <Container className="table-container">  
-                            <Ranking/>
-                          </Container>
-                         <Container fluid className="central-container">
-                            <Container className="statistic-container">
-                                Here goes more info                                
-                            </Container>
-                            <Container className="statistic-container sc-right">
-                                    Here goes more info  
-                                </Container>   
-                         </Container>                
-                        </Container>
+                        {this.tournamentGroups()}
                     </Col>
                     <Col lg={4} md={4}>
                         <Container className="data-home-menu right-col">
-                            <h1>Soon</h1>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
+                            {this.tournamentGroupMatches()}
+
                         </Container>
                     </Col>
                 </Row>
