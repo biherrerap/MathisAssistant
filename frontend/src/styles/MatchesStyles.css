@@ -1,0 +1,28 @@
+.match-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.shield-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+table .team-col-group-rmatch {
+  width: 30%;
+  text-align: right;
+  color: #184799;
+}
+
+table .change-col-group-match {
+  width: 30%;
+  text-align: center;
+  color: #184799;
+}
+/*# sourceMappingURL=MatchesStyles.css.map */

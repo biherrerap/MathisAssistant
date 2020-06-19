@@ -2,11 +2,12 @@ import React from 'react';
 
 import '../Styles/HomeStyles.scss';
 
-import Ranking from '../Components/Home/Ranking'
-import Navbar from '../Components/Home/Navbar'
 import LeftMenu from '../Components/Home/Menu';
-import Groups from '../Components/Tournaments/ShowGroups'
 import Matches from '../Components/Tournaments/MatchesCup'
+import Navbar from '../Components/Home/Navbar'
+import Groups from '../Components/Tournaments/ShowGroups'
+import Ranking from '../Components/Home/Ranking'
+import TeamInfo from '../Components/Teams/TeamInfo'
 
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
@@ -58,6 +59,12 @@ export default class Home extends React.Component{
         )
     }
 
+    teamInfo(){
+        return(
+            <TeamInfo/>
+        )
+    }
+
 
 
     render() {
@@ -82,8 +89,7 @@ export default class Home extends React.Component{
                     </Col>
                     <Col lg={4} md={4}>
                         <Container className="data-home-menu right-col">
-                            {this.tournamentGroupMatches()}
-
+                            {this.teamInfo()}
                         </Container>
                     </Col>
                 </Row>

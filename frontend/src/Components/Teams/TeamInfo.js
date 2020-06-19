@@ -1,20 +1,19 @@
-import React,{useState} from 'react';
+import React from 'react';
+
 import '../../Styles/HomeStyles.scss';
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import '../../Styles/TeamStyles.scss';
+
 import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import { BsArrowRight} from 'react-icons/bs';
-import LeftMenu from '../Components/Home/Menu';
+
 
 
 export default class TeamInfo extends React.Component{ 
 
     render() {
         return(
-            <Container>
-                Team info
+            <Container className="team-info">
+                <img className="profile-shield" src="https://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/72.png"></img>
+                <h3>Tottenham Hotspur</h3>
             </Container>
         )
     }

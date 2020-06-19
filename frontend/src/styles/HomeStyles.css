@@ -1,0 +1,266 @@
+#ma-nav {
+  color: #184799;
+  font-weight: 500;
+  font-size: larger;
+}
+
+#this-nav {
+  color: #0071b7;
+  font-weight: 500;
+  font-size: larger;
+}
+
+.nav-container {
+  margin-top: 1%;
+  font-family: 'montserrat','sans-serif';
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.home-container {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.bg-light {
+  background-color: #ffffff !important;
+}
+
+.navbar-collapse {
+  -webkit-box-pack: end !important;
+      -ms-flex-pack: end !important;
+          justify-content: flex-end !important;
+}
+
+.form-search-home {
+  border-radius: 20px !important;
+  border-color: transparent;
+}
+
+#button-search-home {
+  margin-left: -18%;
+  color: grey;
+  border-color: transparent;
+}
+
+#button-search-home:hover {
+  background: transparent;
+}
+
+.home-menu {
+  background-color: white;
+  max-height: 35em;
+  min-height: 35em;
+  padding-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-home-menu {
+  background-color: white;
+  position: relative;
+  height: 35em;
+}
+
+.data-home-menu {
+  background-color: #f7f7f9;
+  max-height: 35em;
+  border-radius: 20px;
+}
+
+.menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  vertical-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  border-radius: 10px;
+  font-family: "Lato";
+  font-weight: 600;
+  color: lightgray;
+  padding: 5%;
+}
+
+.menu-item:hover {
+  color: #ea904d;
+}
+
+.menu-item-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  vertical-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  border-radius: 10px;
+  font-family: "Lato";
+  font-weight: 600;
+  color: white;
+  background-color: #184799;
+  padding: 5%;
+}
+
+.menu-option-text {
+  margin-left: 10%;
+}
+
+.home-ranking {
+  border-color: transparent;
+}
+
+.table-container {
+  margin-top: 10%;
+  background-color: #f7f7f9;
+  border-radius: 20px;
+  font-family: Lato;
+  margin-bottom: 9%;
+  padding-bottom: .5%;
+  padding-top: 3.5%;
+}
+
+table {
+  background-color: #f7f7f9;
+}
+
+table .pos-col {
+  width: 25px;
+  text-align: left;
+  color: #184799;
+}
+
+table .team-col {
+  max-width: 30%;
+  text-align: left;
+  color: #184799;
+}
+
+table .prevp-col {
+  display: none;
+}
+
+table .points-col {
+  max-width: 25px;
+  text-align: center;
+  color: #184799;
+}
+
+table .change-col {
+  width: 1px;
+  text-align: right;
+  color: #184799;
+}
+
+.table-sm td, .table-sm th {
+  padding: 0.1rem;
+}
+
+.table-shield {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.shield-col {
+  height: 26px;
+  max-width: 15px;
+  text-align: center;
+}
+
+.welcome {
+  background-image: url("https://image.freepik.com/free-vector/abstract-classic-blue-background-design_23-2148419781.jpg");
+  max-height: 125px;
+  border-radius: 20px;
+  padding: 6%;
+  font-family: "Lato";
+  font-size: 200%;
+  color: white;
+}
+
+.statistic-container {
+  background-color: #f7f7f9;
+  border-radius: 20px;
+  background-size: auto;
+}
+
+.central-container {
+  padding-left: 0;
+  padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sc-right {
+  margin-left: 5%;
+}
+
+.right-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f7f7f9;
+  background-size: cover;
+  border-radius: 20px;
+  background-size: auto;
+  font-family: "Lato";
+  color: #184799;
+  height: 35em;
+}
+
+.statistic-container-left {
+  background-image: url("https://image.freepik.com/free-vector/abstract-classic-blue-background-design_23-2148419781.jpg");
+  border-radius: 20px;
+  background-size: auto;
+  color: white;
+  font-family: lato;
+  padding: 6%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.statistic-container-left h9 {
+  margin-left: 169px;
+}
+/*# sourceMappingURL=HomeStyles.css.map */

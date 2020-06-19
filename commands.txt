@@ -10,3 +10,9 @@ python manage.py startapp mathis
 
 ##actulizar tablas
 python manage.py makemigrations mathis
+
+### actualización
+python manage.py migrate mathis
+
+##superuser
+ python manage.py createsuperuser

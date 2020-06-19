@@ -1,0 +1,117 @@
+.main {
+  padding-top: 1.5%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+}
+
+.container-info-team {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 30em;
+  max-height: 38.5em;
+  background-color: white;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 4px 14px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 14px 3px rgba(0, 0, 0, 0.2);
+  padding: 5%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 0;
+}
+
+.big-container-info-team {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-height: 38.5em;
+  background-color: #171738;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 4px 14px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 14px 3px rgba(0, 0, 0, 0.2);
+  padding: 3%;
+}
+
+.col-left {
+  padding-right: 0;
+}
+
+.col-right {
+  padding-left: 0;
+}
+
+.options-teams {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 5%;
+}
+
+.options-button {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 150%;
+}
+
+.options-button:hover {
+  -webkit-transform: translatey(-5px);
+          transform: translatey(-5px);
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: white;
+  border-bottom-width: 100%;
+}
+
+.container-shield-team {
+  text-align: center;
+}
+
+.shield {
+  height: 10em;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#team-name {
+  font-size: 2.5rem;
+  font-family: Lato;
+  font-weight: 800;
+  color: #171738;
+}
+
+.card-header {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.card-shield {
+  height: 3em;
+  width: auto;
+  margin-left: auto;
+}
+
+.card-full {
+  border-radius: 30px;
+}
+
+.card-champsub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.tournament-card {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.card {
+  border-radius: 30px !important;
+}
+/*# sourceMappingURL=TeamStyles.css.map */

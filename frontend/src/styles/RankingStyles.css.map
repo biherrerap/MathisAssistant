@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAsBA,AAAA,gBAAgB,CAAA;EAGZ,gBAAgB,EANX,sGAAsG;EAO3G,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,IAAI;EACnB,WAAW,EAlBR,MAAM;EAmBT,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "RankingStyles.scss"
+    ],
+    "names": [],
+    "file": "RankingStyles.css"
+}
