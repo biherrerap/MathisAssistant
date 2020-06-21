@@ -24,6 +24,7 @@ class Team(models.Model):
     team_points = models.IntegerField(default=0)
     team_class = models.IntegerField(default=0)
     team_type = models.IntegerField(default=0)
+    team_active = models.IntegerField(default=1)
     position_history = models.CharField(max_length=1000, default=None)
     score_history = models.CharField(max_length=1000, default=None)
     class Meta:
@@ -41,15 +42,16 @@ class Player(models.Model):
         return self.name
 
 class Tournament(models.Model):
-    winner = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='winner')
-    second = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='second')
-    goal_scorer = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='scorer')
-    goals = models.IntegerField(default=0)
-    assistant = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='assist', default=None)
-    assistances = models.IntegerField(default=0)
-    fair_play = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='fair_play', default=None)
+    identif = models.IntegerField(default=0, blank=True)
+    goal_scorer = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='scorer', default=None, blank=True)
+    goals = models.IntegerField(default=None, blank=True)
+    assistant = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='assist', default=None, blank=True)
+    assistances = models.IntegerField(default=None, blank=True)
+    fair_play = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='fair_play', default=None, blank=True)
     class Meta:
         ordering = ['id']
+    def __int__(self):
+        return self.identif
 
        
 class Match(models.Model):
@@ -58,6 +60,8 @@ class Match(models.Model):
     team_b_id = models.ForeignKey(Team, on_delete=models.CASCADE, related_name= 'team_b')
     goals_team_a = models.IntegerField(default=0)  
     goals_team_b = models.IntegerField(default=0)
+    goals_team_ap = models.IntegerField(default=0)
+    goals_team_bp = models.IntegerField(default=0)  
     phase_id = models.IntegerField(default=0)
     group_id = models.IntegerField(default=0)
     dt = models.IntegerField(default=0)
