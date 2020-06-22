@@ -16,8 +16,6 @@ admin.site.register(Team)
 'admin.site.register(Matches)'
 
 
-
-
 @admin.register(Stadium)
 class AdvertisingAdmin(admin.ModelAdmin):
     list_display = ('name', 'location')

@@ -15,6 +15,7 @@ import Row from 'react-bootstrap/Row';
 
 import { BsArrowRight} from 'react-icons/bs';
 
+import API from '../server';
 
 export default class Home extends React.Component{
 
@@ -24,6 +25,17 @@ export default class Home extends React.Component{
         this.state = {
 
         }
+    }
+
+    getTeams(){
+        const axios = require("axios")
+        axios.get(API+'/team').then(res => {
+            console.log(res);
+        })  
+    }
+
+    componentDidMount(){
+        this.getTeams();
     }
 
     landingHomeCenter(){
@@ -59,6 +71,12 @@ export default class Home extends React.Component{
         )
     }
 
+    showRanking(){
+        return(
+            <Ranking/>
+        )
+    }
+
     teamInfo(){
         return(
             <TeamInfo/>
@@ -85,7 +103,7 @@ export default class Home extends React.Component{
                         </Container>
                     </Col>
                     <Col lg={5} md={5}>
-                        {this.tournamentGroups()}
+                        {this.showRanking()}
                     </Col>
                     <Col lg={4} md={4}>
                         <Container className="data-home-menu right-col">
