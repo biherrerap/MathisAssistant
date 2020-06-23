@@ -10,4 +10,4 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
 class TeamSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Team
-        fields = ('name' , 'shield', 'location', 'team_points', 'team_class', 'team_active', 'position_history', 'score_history')
+        fields = ('name', 'shield', 'location','score','team_class','type','active','position_history','score_history')

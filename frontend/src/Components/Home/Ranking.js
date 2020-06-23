@@ -33,36 +33,45 @@ export default class Ranking extends React.Component{
         })
     }
 
-
+    organizeRanking(dict){
+        console.log(dict)
+    }
 
     fillTable(){
         return this.state.teamList.map( (item,key) => {
-            /*
-            if(parseInt(item.position) > 0 && parseInt(item.position) < 9){
+            if(parseInt(item.key) > 0 && parseInt(item.key) < 9){
                 var colorbg = 'green';
             }
-            if(parseInt(item.position) > 8 && parseInt(item.position) < 17){
+            if(parseInt(item.key) > 8 && parseInt(item.key) < 17){
                 var colorbg = 'blue';
             }
-            if(parseInt(item.position) > 16 && parseInt(item.position) < 25){
+            if(parseInt(item.key) > 16 && parseInt(item.key) < 25){
                 var colorbg = 'purple';
             }
-            if(parseInt(item.position) > 24 && parseInt(item.position) < 33){
+            if(parseInt(item.key) > 24 && parseInt(item.key) < 33){
                 var colorbg = 'orange';
             }
-            if(parseInt(item.position) > 32){
+            if(parseInt(item.key) > 32){
                 var colorbg = 'red';
             }
-            */
+
+            if(parseInt(item.score_history) < item.score){
+                var change_icon = <AiFillCaretUp/>;
+            }else if(parseInt(item.score_history) == item.score){
+                var change_icon = <TiEquals/>;
+            }else if(parseInt(item.score_history) > item.score){
+                var change_icon = <AiFillCaretDown/>;
+            }
+            
             return(
                 <tr key={key}>
                 <td className="pos-col">{key+1}</td>
                 <td className="shield-col"><img className="table-shield" src={item.shield}></img></td>
                 <td className="team-col">{item.name}</td>
                 <td className="prevp-col">{item.score_history}</td>
-                <td className="points-col">{item.team_points}</td>
-                <td className="change-col"><TiEquals/></td>
-                <td className="change-col"><BsDot /></td>
+                <td className="points-col">{item.score}</td>
+                <td className="change-col">{change_icon}</td>
+                <td className="change-col" style={colorbg}><BsDot/></td>
                 </tr>
               )
           })

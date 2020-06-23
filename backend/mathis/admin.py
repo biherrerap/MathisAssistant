@@ -9,7 +9,7 @@ from .models import Match as Matches
 
 # Register your models here.
 
-admin.site.register(Team)
+'admin.site.register(Team)'
 'admin.site.register(Location)'
 'admin.site.register(Player)'
 'admin.site.register(Tournament)'
@@ -34,4 +34,8 @@ class AdvertisingAdmin(admin.ModelAdmin):
 
 @admin.register(Tournament)
 class AdvertisingAdmin(admin.ModelAdmin):
-    list_display = ('identif', 'goal_scorer')
+    list_display = ('identif', 'goal_scorer') 
+
+@admin.register(Team)
+class AdvertisingAdmin(admin.ModelAdmin):
+    list_display = ('name', 'shield', 'location', 'stadium','score','team_class','type','active','position_history','score_history')

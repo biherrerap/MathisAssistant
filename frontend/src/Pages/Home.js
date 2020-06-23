@@ -30,7 +30,6 @@ export default class Home extends React.Component{
     getTeams(){
         const axios = require("axios")
         axios.get(API+'/team').then(res => {
-            console.log(res);
         })  
     }
 

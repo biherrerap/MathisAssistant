@@ -2,7 +2,38 @@ from django.db import models
 
 class Location(models.Model): 
     city = models.CharField(max_length=200)
-    country = models.CharField(max_length=200)
+    COUNTRY = [
+       ('AUSTRIA', 'Austria'),
+       ('BELARUS', 'Belarus'),
+       ('BELGIUM', 'Belgium'),
+       ('BOSNIA_AND_HERZEGOVINA', 'Bosnia and Gerzegovina'),
+       ('BULGARIA', 'Bulgaria'),
+       ('CROATIA', 'Croatia'),
+       ('CYPRUS', 'Cyprus'),
+       ('DENMARK', 'Denmark'),
+       ('ENGLAND', 'England'),
+       ('FINLAND', 'Finland'),
+       ('FRANCE', 'France'),
+       ('GERMANY', 'Germany'),
+       ('GREECE', 'Greece'),
+       ('ITALY', 'Italy'),
+       ('NETHERLANDS', 'Netherlands'),
+       ('NORWAY', 'Norway'),
+       ('PORTUGAL', 'Portugal'),
+       ('SERBIA', 'Switzerland'),
+       ('SCOTLAND', 'Scotland'),
+       ('SLOVAKIA', 'Slovakia'),
+       ('SLOVENIA', 'Slovenia'),
+       ('SPAIN', 'Spain'),
+       ('SWEDEN', 'Sweden'),
+       ('SWITZERLAND', 'Switzerland'),
+       ('TURKEY', 'Turkey'),
+      ]
+    country = models.CharField(
+        max_length=50,
+        choices=COUNTRY,
+        default='AUSTRIA'
+    )
     class Meta:
         ordering = ['city']
     def __str__(self):
@@ -21,14 +52,14 @@ class Team(models.Model):
     shield = models.CharField(max_length=200)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, default=None)
     stadium = models.ForeignKey(Stadium, on_delete=models.CASCADE, default=None)
-    team_points = models.IntegerField(default=0)
+    score = models.IntegerField(default=0)
     team_class = models.IntegerField(default=0)
-    team_type = models.IntegerField(default=0)
-    team_active = models.IntegerField(default=1)
+    type = models.IntegerField(default=0)
+    active = models.IntegerField(default=1)
     position_history = models.CharField(max_length=1000, default=None)
     score_history = models.CharField(max_length=1000, default=None)
     class Meta:
-        ordering = ['name']
+        ordering = ['score']
     def __str__(self):
         return self.name
 
