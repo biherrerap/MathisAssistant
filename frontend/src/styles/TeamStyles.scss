@@ -1,3 +1,26 @@
+//Colors used:
+
+$primary-color: #184799;
+$orange: #ea904d;
+$secondary-color: #0071b7;
+$light-color: #f7f7f9;
+
+//Fonts used:
+
+$montserrat: 'Montserrat';
+$lato: 'Lato';
+
+//Other styles:
+
+$border-radius: 20px;
+
+
+//image
+
+$bg-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-background-design_23-2148419781.jpg");
+$sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-background_23-2148434268.jpg");
+
+
 .main{
     padding-top: 1.5%;
     padding-left: 1.5%;
@@ -97,7 +120,7 @@
 
 .card{
     border-radius: 30px !important;
-}
+}   
 
 .team-info{
     text-align: center;
@@ -107,6 +130,28 @@
 }
 
 .profile-shield{
-    max-height: 150px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
+.team-img-container{
+    height: 150px;
+    margin-bottom: 5%;
+}
+
+.team-prof-stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.home-raking{
+    background: transparent;
+    color: $primary-color;
+}
+
+.team-info-card{
+    padding-left: 10%;
+    padding-right: 10%;
+}

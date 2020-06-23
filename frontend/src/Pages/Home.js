@@ -44,7 +44,7 @@ export default class Home extends React.Component{
                          Hi Brehynner!
                     </Container>
                     <Container className="table-container">  
-                        <Ranking/>
+                        {this.showRanking()}
                     </Container>
                     <Container fluid className="central-container">
                         <Container className="statistic-container">
@@ -102,7 +102,7 @@ export default class Home extends React.Component{
                         </Container>
                     </Col>
                     <Col lg={5} md={5}>
-                        {this.showRanking()}
+                        {this.landingHomeCenter()}
                     </Col>
                     <Col lg={4} md={4}>
                         <Container className="data-home-menu right-col">

@@ -1,16 +1,15 @@
 
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+
 import '../../Styles/HomeStyles.scss';
 import '../../Styles/RankingStyles.scss';
+
 import {AiFillCaretDown, AiFillCaretUp} from 'react-icons/ai';
 import {TiEquals} from 'react-icons/ti';
 import {BsDot} from 'react-icons/bs';
 
-import API from '../../server'
-
-//import Header from '../Header';
-//import API_URL from '../Server';
+import API from '../../server';
 
 export default class Ranking extends React.Component{
 
@@ -95,7 +94,7 @@ export default class Ranking extends React.Component{
                     <tbody>
                         {this.fillTable()}
                     </tbody>
-                    </Table>
+            </Table>
         )
     }
 }
