@@ -78,7 +78,7 @@ export default class Ranking extends React.Component{
   
     render() {
         return(
-            <Table borderless className="home-raking" size="sm sm">
+            <Table borderless className="home-ranking" size="sm sm">
                     <thead>
                         <tr>
                         <th className="pos-col"></th>
