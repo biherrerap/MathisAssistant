@@ -8,11 +8,13 @@ import Table from 'react-bootstrap/Table';
 import Card from 'react-bootstrap/Card';
 
 import {FaTrophy} from 'react-icons/fa';
-import {FaCrown} from 'react-icons/fa'
-import {GiPlainCircle} from 'react-icons/gi'
-import {GiSoccerBall} from 'react-icons/gi'
+import {FaCrown} from 'react-icons/fa';
+import {FaShieldAlt} from 'react-icons/fa';
+import {GiSoccerBall} from 'react-icons/gi';
+import {GrFormNext} from 'react-icons/gr';
 import {IoMdTrendingUp} from 'react-icons/io';
-import{MdLocationOn} from 'react-icons/md'
+import{MdLocationOn} from 'react-icons/md';
+
 
 export default class TeamInfo extends React.Component{ 
 
@@ -46,13 +48,24 @@ export default class TeamInfo extends React.Component{
         return(
             <Container className="team-info">
                 <Container className="shield-stats">
-                        <img className="profile-shield" src="https://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/72.png"></img>
+                        <img className="profile-shield shield-height" src="https://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/72.png"></img>
                     <Container className="upper-stats">
                         <h2>Tottenham Hotspur</h2> 
                         <h5><MdLocationOn/>&nbsp;London, England</h5> 
                         <h5><GiSoccerBall/>&nbsp;Tottenham Hotspur Stadium</h5> 
-                    </Container>               
+                    </Container>    
+                    <Container className="classColor">
+                    </Container>           
                 </Container>
+                <br></br>
+                <h4>Score: 19966</h4>
+               <Container>
+               <Container className="shield-stats best-participation">            
+                    <p>33</p>
+                    <p>Champion</p>
+                    <p className="profile-shield btn-next"><GrFormNext/></p>
+                </Container>
+               </Container>
             </Container>
         )
     }

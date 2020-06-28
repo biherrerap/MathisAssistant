@@ -3,7 +3,7 @@
 $primary-color: #184799;
 $orange: #ea904d;
 $secondary-color: #0071b7;
-$light-color: #f7f7f9;
+$light-color: #E3EDF7;
 
 //Fonts used:
 
@@ -35,33 +35,28 @@ $sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
 .profile-shield{
     box-shadow: 4px 4px 4px rgba(165, 177, 198, 0.8),-4px -4px 4px rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    height: 75px;
     width: auto;
     background-color: white;
 }
 
-.shield-stats h2{
+.shield-height{
+    height: 75px;
+}
+
+.shield-stats h2,
+.shield-stats h5, h4
+{
   color: var(--gray);
-  font-family: "Raleway", sans-serif;
-  font-size: 1.3rem;
+  font-family: "Questrial", sans-serif;
+}
+
+.shield-stats h2{
+    font-size: 1.3rem;
 }
 
 .shield-stats h5{
-    color: var(--gray);
-    font-family: "Raleway", sans-serif;
     font-size: 0.8rem;
 }
-
-.shield-stats h2::after {
-    background-color: var(--gray);
-    content: "";
-    position: absolute;
-    bottom: -1rem;
-    left: 10%;
-    width: 80%;
-    height: 1px;
-    opacity: 0.2;
-  }
 
 .upper-stats-container{
     display: flex;
@@ -69,73 +64,37 @@ $sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
     justify-content: space-between;
 }
 
-/*
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap");
-
-.container {
-  --background: #e0e5ec;
-  --gray: #797d7f;
-  background-color: var(--background);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
+.classColor{
+    width: 4px;
+    height: 50px;
+    background-color: goldenrod;
+    padding: 0;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 210px;
-  height: 300px;
-  border-radius: 12px;
-  box-shadow: 8px 8px 16px rgba(165, 177, 198, 0.8),
-    -8px -8px 16px rgba(255, 255, 255, 0.8);
+.matches-team-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-
-
-.card h2,
-.card h3,
-.card p {
-  color: var(--gray);
-  font-family: "Raleway", sans-serif;
+.best-participation{
+    background: linear-gradient(70.72deg, #FFFFFF -30.86%, #ECF1F7 -10.72%, #CFDCEB 112.31%);
+    box-shadow: inset 4px 4px 6px rgba(18, 46, 101, 0.1), inset -4px -4px 4px rgba(255, 255, 255, 0.7);
+    //box-shadow: 4px 4px 4px rgba(165, 177, 198, 0.8),-4px -4px 4px rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-.card h2 {
-  font-weight: 500;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-  opacity: 0.8;
-  margin: 1rem 0;
-}
-.card h3 {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  font-weight: 400;
-  font-size: 1.05rem;
-  opacity: 0.8;
-  margin: 1rem 0;
+.best-participation p{
+    margin: 0;
 }
 
-.card h3::after {
-  background-color: var(--gray);
-  content: "";
-  position: absolute;
-  bottom: -1rem;
-  left: 10%;
-  width: 80%;
-  height: 1px;
-  opacity: 0.2;
+.fashield{
+    color: var(--gray);
 }
 
-.card p {
-  font-size: 0.85rem;
-  padding: 1rem;
-  text-align: center;
-  line-height: 1.2;
+.btn-next{
+    display: flex;
 }
-*/
