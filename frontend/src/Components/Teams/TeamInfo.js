@@ -8,21 +8,17 @@ import Table from 'react-bootstrap/Table';
 import Card from 'react-bootstrap/Card';
 
 import {FaTrophy} from 'react-icons/fa';
-import {IoMdTrendingUp} from 'react-icons/io';
 import {FaCrown} from 'react-icons/fa'
 import {GiPlainCircle} from 'react-icons/gi'
-
+import {GiSoccerBall} from 'react-icons/gi'
+import {IoMdTrendingUp} from 'react-icons/io';
+import{MdLocationOn} from 'react-icons/md'
 
 export default class TeamInfo extends React.Component{ 
 
-    render() {
+    save(){
         return(
-            <Container className="team-info">
-                <Container className="upper-part up-shield">
-                <Container className="neumorphic variation2">
-                    <img className="profile-shield" src="https://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/72.png"></img>
-                </Container>                
-                </Container>
+            <div>
                 <Container className="upper-part">
                     <h2>19982</h2> 
                 </Container>
@@ -41,6 +37,21 @@ export default class TeamInfo extends React.Component{
                     <Container className="neumorphic variation2 circle-stats">
                         <img className="profile-shield" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Flag_of_England.PNG"></img>
                     </Container>
+             </Container>
+            </div>
+        )
+    }
+
+    render() {
+        return(
+            <Container className="team-info">
+                <Container className="shield-stats">
+                        <img className="profile-shield" src="https://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/72.png"></img>
+                    <Container className="upper-stats">
+                        <h2>Tottenham Hotspur</h2> 
+                        <h5><MdLocationOn/>&nbsp;London, England</h5> 
+                        <h5><GiSoccerBall/>&nbsp;Tottenham Hotspur Stadium</h5> 
+                    </Container>               
                 </Container>
             </Container>
         )
