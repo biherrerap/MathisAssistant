@@ -98,3 +98,14 @@ $sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
 .btn-next{
     display: flex;
 }
+
+.table-teaminfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.table-info{
+    display: flex;
+    flex-direction: column;
+}

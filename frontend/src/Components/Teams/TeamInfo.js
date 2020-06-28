@@ -58,14 +58,41 @@ export default class TeamInfo extends React.Component{
                     </Container>           
                 </Container>
                 <br></br>
+                <br></br>
                 <h4>Score: 19966</h4>
-               <Container>
-               <Container className="shield-stats best-participation">            
-                    <p>33</p>
-                    <p>Champion</p>
-                    <p className="profile-shield btn-next"><GrFormNext/></p>
+                <br></br>
+                <Container className="shield-stats best-participation table-info">   
+                       <Container className="table-teaminfo">
+                          <p>G</p>
+                          <p>E</p>
+                          <p>P</p>
+                          <p>GF</p>
+                          <p>GC</p>
+                          <p>Pts</p>
+                       </Container>
+                       <Container className="table-teaminfo">
+                          <p>8</p>
+                          <p>3</p>
+                          <p>5</p>
+                          <p>32</p>
+                          <p>11</p>
+                          <p>27</p>
+                       </Container>
                 </Container>
-               </Container>
+                <br></br>
+                    <p className="to-center">Best participation</p>         
+                <Container className="shield-stats best-participation">   
+                        <p>33</p>
+                        <p>Champion</p>
+                        <p className="profile-shield btn-next"><GrFormNext/></p>
+                </Container>
+                <br></br>
+                <p className="to-center">Compete against</p>         
+                <Container className="shield-stats best-participation">   
+                        <p>12</p>
+                        <p>Barcelona</p>
+                        <p className="profile-shield btn-next"><GrFormNext/></p>
+                </Container>
             </Container>
         )
     }
