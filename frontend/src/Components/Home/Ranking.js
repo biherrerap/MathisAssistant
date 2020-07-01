@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
 
 import '../../Styles/HomeStyles.scss';
 import '../../Styles/RankingStyles.scss';
@@ -15,7 +16,7 @@ export default class Ranking extends React.Component{
 
     constructor(props){
         super(props);
-        this.state = {
+        this.state = { 
             teamList : []
         }
     }
@@ -66,7 +67,7 @@ export default class Ranking extends React.Component{
                 <tr key={key}>
                 <td className="pos-col">{key+1}</td>
                 <td className="shield-col"><img className="table-shield" src={item.shield}></img></td>
-                <td className="team-col">{item.name}</td>
+                <td className="team-col"><Button>{item.name}</Button></td>
                 <td className="prevp-col">{item.score_history}</td>
                 <td className="points-col">{item.score}</td>
                 <td className="change-col">{change_icon}</td>

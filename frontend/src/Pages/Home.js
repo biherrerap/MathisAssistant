@@ -9,6 +9,7 @@ import Groups from '../Components/Tournaments/ShowGroups'
 import Ranking from '../Components/Home/Ranking'
 import TeamInfo from '../Components/Teams/TeamInfo'
 
+import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -23,8 +24,16 @@ export default class Home extends React.Component{
         super(props);
 
         this.state = {
-
+            showTeamInfo: false
         }
+    }
+
+    activateTeamInfo = () => {
+        console.log('activate', this.state.showTeamInfo)
+        this.setState({
+            showTeamInfo: !this.state.showTeamInfo,
+        })
+        console.log('activated', this.state.showTeamInfo)
     }
 
     getTeams(){
@@ -77,16 +86,21 @@ export default class Home extends React.Component{
     }
 
     teamInfo(){
+        console.log(this.state.showTeamInfo)
         return(
-            <TeamInfo/>
+            <div>
+                 {this.state.showTeamInfo ? <TeamInfo/> : null}
+            </div>
         )
     }
 
 
 
-    render() {
+    render() {  
+
         return(
             <div>
+        <Button onClick={this.activateTeamInfo}>Botón de prueba</Button>
             <Container fluid className="nav-container">
                 <Navbar></Navbar>
             </Container>

@@ -16,7 +16,15 @@ import {IoMdTrendingUp} from 'react-icons/io';
 import{MdLocationOn} from 'react-icons/md';
 
 
-export default class TeamInfo extends React.Component{ 
+export default class TeamInfo extends React.Component{
+    
+    constructor(props) {
+        super(props);
+     
+        this.state = {
+          isShow: true,
+        };
+      }    
 
     save(){
         return(
