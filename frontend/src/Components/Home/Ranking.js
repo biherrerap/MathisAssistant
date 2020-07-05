@@ -67,7 +67,7 @@ export default class Ranking extends React.Component{
                 <tr key={key}>
                 <td className="pos-col">{key+1}</td>
                 <td className="shield-col"><img className="table-shield" src={item.shield}></img></td>
-                <td className="team-col"><Button>{item.name}</Button></td>
+                <td className="team-col"><Button      >{item.name}</Button></td>
                 <td className="prevp-col">{item.score_history}</td>
                 <td className="points-col">{item.score}</td>
                 <td className="change-col">{change_icon}</td>
@@ -84,7 +84,7 @@ export default class Ranking extends React.Component{
                         <tr>
                         <th className="pos-col"></th>
                         <th className="shield-col"></th>
-                        <th className="team-col">Team</th>
+                        <th className="team-col">{this.props.example}</th>
                         <th className="prevp-col">Prev p</th>
                         <th className="points-col">Points</th>
                         <th className="change-col"></th>

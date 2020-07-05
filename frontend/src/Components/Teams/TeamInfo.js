@@ -15,6 +15,8 @@ import {GrFormNext} from 'react-icons/gr';
 import {IoMdTrendingUp} from 'react-icons/io';
 import{MdLocationOn} from 'react-icons/md';
 
+import API from '../../server';
+
 
 export default class TeamInfo extends React.Component{
     
@@ -23,8 +25,22 @@ export default class TeamInfo extends React.Component{
      
         this.state = {
           isShow: true,
+          team: []
         };
       }    
+
+    componentWillMount(){
+        this.getTeam();
+    }
+
+    getTeam(){
+        const axios = require("axios");
+        const team_id = this.props.id;
+        axios.get(API+'/team/'+ team_id).then(res => {
+            this.setState({team : res.data})
+            console.log(this.state.team)
+        })
+    }
 
     save(){
         return(
@@ -56,9 +72,9 @@ export default class TeamInfo extends React.Component{
         return(
             <Container className="team-info">
                 <Container className="shield-stats">
-                        <img className="profile-shield shield-height" src="https://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/72.png"></img>
+                        <img className="profile-shield shield-height" src={this.state.team.shield}></img>
                     <Container className="upper-stats">
-                        <h2>Tottenham Hotspur</h2> 
+                        <h2>{this.state.team.name}</h2> 
                         <h5><MdLocationOn/>&nbsp;London, England</h5> 
                         <h5><GiSoccerBall/>&nbsp;Tottenham Hotspur Stadium</h5> 
                     </Container>    
@@ -67,7 +83,7 @@ export default class TeamInfo extends React.Component{
                 </Container>
                 <br></br>
                 <br></br>
-                <h4>Score: 19966</h4>
+                <h4>Score: {this.state.team.score}</h4>
                 <br></br>
                 <Container className="shield-stats best-participation table-info">   
                        <Container className="table-teaminfo">

@@ -24,16 +24,15 @@ export default class Home extends React.Component{
         super(props);
 
         this.state = {
-            showTeamInfo: false
+            showTeamInfo: false,
+            teamTest: [],
+            teamtoInfo: 0,
         }
     }
 
-    activateTeamInfo = () => {
-        console.log('activate', this.state.showTeamInfo)
-        this.setState({
-            showTeamInfo: !this.state.showTeamInfo,
-        })
-        console.log('activated', this.state.showTeamInfo)
+    
+    componentDidMount(){
+       // this.getTeams();
     }
 
     getTeams(){
@@ -42,18 +41,21 @@ export default class Home extends React.Component{
         })  
     }
 
-    componentDidMount(){
-        this.getTeams();
+    activateTeamInfo = () => {
+        this.setState({
+            showTeamInfo: !this.state.showTeamInfo,
+        })
     }
 
     landingHomeCenter(){
+        const example = 'Head of the table';
         return(
                 <Container className="main-home-menu">
                     <Container className="welcome">
                          Hi Brehynner!
                     </Container>
                     <Container className="table-container">  
-                        {this.showRanking()}
+                        {this.showRanking(example)}
                     </Container>
                     <Container fluid className="central-container">
                         <Container className="statistic-container">
@@ -79,17 +81,16 @@ export default class Home extends React.Component{
         )
     }
 
-    showRanking(){
+    showRanking(word){
         return(
-            <Ranking/>
+            <Ranking example={word}/>
         )
     }
 
     teamInfo(){
-        console.log(this.state.showTeamInfo)
         return(
             <div>
-                 {this.state.showTeamInfo ? <TeamInfo/> : null}
+                 {this.state.showTeamInfo ? <TeamInfo id={1}/> : null}
             </div>
         )
     }
@@ -109,6 +110,7 @@ export default class Home extends React.Component{
                     <Col lg={3} md={3}>
                         <Container className="home-menu">
                             <LeftMenu/>
+                            {this.getTeams()}
                             <Container className="statistic-container-left">
                                 <h4>More features</h4>
                                 <h9>Soon <BsArrowRight/></h9>
