@@ -38,7 +38,7 @@ export default class TeamInfo extends React.Component{
         const team_id = this.props.id;
         axios.get(API+'/team/'+ team_id).then(res => {
             this.setState({team : res.data})
-            console.log(this.state.team)
+            console.log('inside teaminfo... ' + this.state.team.name)
         })
     }
 

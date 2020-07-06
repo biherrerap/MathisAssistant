@@ -26,7 +26,7 @@ export default class Home extends React.Component{
         this.state = {
             showTeamInfo: false,
             teamTest: [],
-            teamtoInfo: 0,
+            teamPassed: 0,
         }
     }
 
@@ -39,12 +39,6 @@ export default class Home extends React.Component{
         const axios = require("axios")
         axios.get(API+'/team').then(res => {
         })  
-    }
-
-    activateTeamInfo = () => {
-        this.setState({
-            showTeamInfo: !this.state.showTeamInfo,
-        })
     }
 
     landingHomeCenter(){
@@ -81,27 +75,41 @@ export default class Home extends React.Component{
         )
     }
 
-    showRanking(word){
+    changeTitle(head){
+        this.setState({otherInfo: head})
+    }
+
+    showRanking(){
         return(
-            <Ranking example={word}/>
+            <Ranking             
+            data={
+                {activateTeamInfo:this.activateTeamInfo.bind(this)}}      
+            />
         )
+    }
+
+    activateTeamInfo = (team_id) => {
+        console.log('activating... ' + team_id);
+        this.setState({
+            teamPassed: team_id,
+            showTeamInfo: !this.state.showTeamInfo,
+        })
+        this.changeTitle('test')
     }
 
     teamInfo(){
+        console.log('team passing ...' + this.state.teamPassed);
         return(
             <div>
-                 {this.state.showTeamInfo ? <TeamInfo id={1}/> : null}
+                 {this.state.showTeamInfo ? <TeamInfo id={this.state.teamPassed}/> : null}
             </div>
         )
     }
-
-
 
     render() {  
 
         return(
             <div>
-        <Button onClick={this.activateTeamInfo}>Botón de prueba</Button>
             <Container fluid className="nav-container">
                 <Navbar></Navbar>
             </Container>

@@ -30,3 +30,22 @@ $sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
     font-size: 100%;
     color: white;
 }
+
+.btn-ranking-name{
+    background: transparent;
+    color: $primary-color;
+    padding: 0;
+    border-color: transparent;
+    &:hover{
+        background: transparent;
+        color: $primary-color;
+        font-weight: 800;
+        border-color: transparent;
+    }
+    &:focus{
+        border-color: transparent;
+    }
+    &:active{
+        border-color: transparent;
+    }
+}
