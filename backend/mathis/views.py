@@ -26,5 +26,5 @@ class LocationViewSet(viewsets.ModelViewSet):
     serializer_class = LocationSerializer
 
 class TeamViewSet(viewsets.ModelViewSet):
-    queryset = Team.objects.all().order_by('name')
+    queryset = Team.objects.all().order_by('score')
     serializer_class = TeamSerializer

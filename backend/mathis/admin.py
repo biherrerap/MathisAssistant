@@ -36,6 +36,6 @@ class AdvertisingAdmin(admin.ModelAdmin):
 class AdvertisingAdmin(admin.ModelAdmin):
     list_display = ('identif', 'goal_scorer') 
 
-@admin.register(Team)
+@admin.register(Team) 
 class AdvertisingAdmin(admin.ModelAdmin):
-    list_display = ('name', 'shield', 'location', 'stadium','score','team_class','type','active','position_history','score_history')
+    list_display = ('name', 'location', 'stadium','score')
