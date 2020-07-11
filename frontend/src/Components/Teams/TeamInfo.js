@@ -21,18 +21,17 @@ export default class TeamInfo extends React.Component{
           isShow: true,
           team: []
         };
+        this.getTeam();
       }    
 
-    componentWillMount(){
-        this.getTeam();
-    }
+ 
 
     getTeam(){
         const axios = require("axios");
         const team_id = this.props.id;
         axios.get(API+'/team/'+ team_id).then(res => {
             this.setState({team : res.data})
-            console.log('inside teaminfo... ' + this.state.team.name)
+            //console.log('inside teaminfo... ' + this.state.location.city);
         })
     }
 
@@ -69,7 +68,7 @@ export default class TeamInfo extends React.Component{
                         <img alt="shield-teaminfo"  className="profile-shield shield-height" src={this.state.team.shield}></img>
                     <Container className="upper-stats">
                         <h2>{this.state.team.name}</h2> 
-                        <h5><MdLocationOn/>&nbsp;London, England</h5> 
+                        <h5><MdLocationOn/>&nbsp;{typeof this.state.team.location !== "undefined"  && typeof this.state.team.location.city !== "undefined" && this.state.team.location.city}, {typeof this.state.team.location !== "undefined"  && typeof this.state.team.location.country !== "undefined" && this.state.team.location.country.toLowerCase()}</h5> 
                         <h5><GiSoccerBall/>&nbsp;Tottenham Hotspur Stadium</h5> 
                     </Container>    
                     <Container className="classColor">

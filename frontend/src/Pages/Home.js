@@ -88,7 +88,7 @@ export default class Home extends React.Component{
     }
 
     activateTeamInfo = (team_id) => {
-        console.log('activating... ' + team_id);
+        //console.log('activating... ' + team_id);
         this.setState({
             teamPassed: team_id,
             showTeamInfo: !this.state.showTeamInfo,
@@ -97,7 +97,7 @@ export default class Home extends React.Component{
     }
 
     teamInfo(){
-        console.log('team passing ...' + this.state.teamPassed);
+        //console.log('team passing ...' + this.state.teamPassed);
         return(
             <div>
                  {this.state.showTeamInfo ? <TeamInfo id={this.state.teamPassed}/> : null}
