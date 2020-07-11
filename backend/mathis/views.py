@@ -14,5 +14,5 @@ class StadiumViewSet(viewsets.ModelViewSet):
     serializer_class = StadiumSerializer
 
 class TeamViewSet(viewsets.ModelViewSet):
-    queryset = Team.objects.all().order_by('score')
+    queryset = Team.objects.all().order_by('-score')
     serializer_class = TeamSerializer

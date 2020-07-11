@@ -69,7 +69,7 @@ export default class TeamInfo extends React.Component{
                     <Container className="upper-stats">
                         <h2>{this.state.team.name}</h2> 
                         <h5><MdLocationOn/>&nbsp;{typeof this.state.team.location !== "undefined"  && typeof this.state.team.location.city !== "undefined" && this.state.team.location.city}, {typeof this.state.team.location !== "undefined"  && typeof this.state.team.location.country !== "undefined" && this.state.team.location.country.toLowerCase()}</h5> 
-                        <h5><GiSoccerBall/>&nbsp;Tottenham Hotspur Stadium</h5> 
+                        <h5><GiSoccerBall/>&nbsp;{typeof this.state.team.stadium !== "undefined"  && typeof this.state.team.stadium.name !== "undefined" && this.state.team.stadium.name}</h5> 
                     </Container>    
                     <Container className="classColor">
                     </Container>           

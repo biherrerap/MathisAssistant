@@ -18,7 +18,8 @@ class LocationSerializer(serializers.ModelSerializer):
 
 class TeamSerializer(serializers.ModelSerializer):
     location = LocationSerializer(read_only=True)
+    stadium = StadiumSerializer(read_only=True)
 
     class Meta:  
         model = Team
-        fields = ('name', 'shield', 'location','score','team_class','type','active','position_history','score_history')   
+        fields = ('name', 'shield', 'stadium', 'location','score','team_class','type','active','position_history','score_history')   
