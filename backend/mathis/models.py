@@ -55,7 +55,7 @@ class Team(models.Model):
     score = models.IntegerField(default=0)
     team_class = models.IntegerField(default=0)
     type = models.IntegerField(default=0)
-    active = models.IntegerField(default=1)
+    active = models.IntegerField(default=1)   
     position_history = models.CharField(max_length=1000, default=None)
     score_history = models.CharField(max_length=1000, default=None)
     class Meta:

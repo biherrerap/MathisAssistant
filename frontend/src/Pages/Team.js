@@ -1,16 +1,16 @@
-import React,{useState} from 'react';
-import '../Styles/HomeStyles.scss';
-import Ranking from '../Components/Home/Ranking'
-import Group from '../Components/Tournaments/Group'
-import Navbar from '../Components/Home/Navbar'
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import { BsArrowRight} from 'react-icons/bs';
-import LeftMenu from '../Components/Home/Menu';
+import React from 'react';
 
+import '../Styles/HomeStyles.scss';
+
+import LeftMenu from '../Components/Home/Menu';
+import Navbar from '../Components/Home/Navbar'
+import Ranking from '../Components/Home/Ranking'
+
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+
+import { BsArrowRight} from 'react-icons/bs';
 
 export default class Teams extends React.Component{ 
 
@@ -27,7 +27,7 @@ export default class Teams extends React.Component{
                             <LeftMenu/>
                             <Container className="statistic-container-left">
                                 <h4>More features</h4>
-                                <h9>Soon <BsArrowRight/></h9>
+                                <h4 className="h9">Soon <BsArrowRight/></h4>
                             </Container>
                         </Container>
                     </Col>

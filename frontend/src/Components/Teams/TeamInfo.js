@@ -4,19 +4,13 @@ import '../../Styles/HomeStyles.scss';
 import '../../Styles/TeamStyles.scss';
 
 import Container from 'react-bootstrap/Container';
-import Table from 'react-bootstrap/Table';
-import Card from 'react-bootstrap/Card';
 
-import {FaTrophy} from 'react-icons/fa';
-import {FaCrown} from 'react-icons/fa';
-import {FaShieldAlt} from 'react-icons/fa';
+
 import {GiSoccerBall} from 'react-icons/gi';
 import {GrFormNext} from 'react-icons/gr';
-import {IoMdTrendingUp} from 'react-icons/io';
 import{MdLocationOn} from 'react-icons/md';
 
 import API from '../../server';
-
 
 export default class TeamInfo extends React.Component{
     
@@ -61,7 +55,7 @@ export default class TeamInfo extends React.Component{
                         12533
                     </Container>
                     <Container className="neumorphic variation2 circle-stats">
-                        <img className="profile-shield" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Flag_of_England.PNG"></img>
+                        <img alt="shield-teaminfo" className="profile-shield" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Flag_of_England.PNG"></img>
                     </Container>
              </Container>
             </div>
@@ -72,7 +66,7 @@ export default class TeamInfo extends React.Component{
         return(
             <Container className="team-info">
                 <Container className="shield-stats">
-                        <img className="profile-shield shield-height" src={this.state.team.shield}></img>
+                        <img alt="shield-teaminfo"  className="profile-shield shield-height" src={this.state.team.shield}></img>
                     <Container className="upper-stats">
                         <h2>{this.state.team.name}</h2> 
                         <h5><MdLocationOn/>&nbsp;London, England</h5> 

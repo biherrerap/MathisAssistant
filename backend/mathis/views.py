@@ -1,29 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework import viewsets
-from .serializers import LocationSerializer, TeamSerializer
+from .serializers import LocationSerializer, TeamSerializer, StadiumSerializer
 
-from .models import Location, Team
-
-'''
-def index(request):
-    team_list = Team.objects.all()
-    #output = ', '.join([q for q in team_list])
-    return HttpResponse(team_list)
-
-def detail(request, team_id):
-    return HttpResponse("You're looking at team %s." % team_id)
-
-def name(request, team_id):
-    response = "You're looking at name of team %s."
-    return HttpResponse(response % team_id)
-def vote(request, team_id):
-    return HttpResponse("You're voting on question %s." % team_id)
-    ''' 
+from .models import Location, Team, Stadium
 
 class LocationViewSet(viewsets.ModelViewSet):
     queryset = Location.objects.all().order_by('city')
     serializer_class = LocationSerializer
+
+class StadiumViewSet(viewsets.ModelViewSet):
+    queryset = Stadium.objects.all().order_by('name')
+    serializer_class = StadiumSerializer
 
 class TeamViewSet(viewsets.ModelViewSet):
     queryset = Team.objects.all().order_by('score')

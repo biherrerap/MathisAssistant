@@ -1,12 +1,13 @@
 
 import React from 'react';
 import Nav from 'react-bootstrap/Nav'
+
 import '../../Styles/HomeStyles.scss';
+
 import { RiArrowDropRightLine } from 'react-icons/ri';
 import { TiHomeOutline} from 'react-icons/ti';
 import { GiSoccerBall} from 'react-icons/gi';
-import { FaShieldAlt} from 'react-icons/fa';
-import {AiOutlineOrderedList} from 'react-icons/ai';
+
 import {IoMdStats} from 'react-icons/io';
 import {IoIosSettings} from 'react-icons/io'
 

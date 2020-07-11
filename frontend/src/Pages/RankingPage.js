@@ -28,7 +28,7 @@ export default class RankingPage extends React.Component{
                             <LeftMenu/>
                             <Container className="statistic-container-left">
                                 <h4>More features</h4>
-                                <h9>Soon <BsArrowRight/></h9>
+                                <h4 className="h9">Soon <BsArrowRight/></h4>
                             </Container>
                         </Container>
                     </Col>

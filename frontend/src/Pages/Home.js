@@ -9,7 +9,6 @@ import Groups from '../Components/Tournaments/ShowGroups'
 import Ranking from '../Components/Home/Ranking'
 import TeamInfo from '../Components/Teams/TeamInfo'
 
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -121,7 +120,7 @@ export default class Home extends React.Component{
                             {this.getTeams()}
                             <Container className="statistic-container-left">
                                 <h4>More features</h4>
-                                <h9>Soon <BsArrowRight/></h9>
+                                <h4 className="h9">Soon <BsArrowRight/></h4>
                             </Container>
                         </Container>
                     </Col>
