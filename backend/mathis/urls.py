@@ -5,6 +5,7 @@ from . import views
 
 router = routers.DefaultRouter()
 router.register(r'location', views.LocationViewSet)
+router.register(r'match', views.MatchViewSet)
 router.register(r'stadium', views.StadiumViewSet)
 router.register(r'team', views.TeamViewSet)
 

@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework import viewsets
-from .serializers import LocationSerializer, TeamSerializer, StadiumSerializer
+from .serializers import LocationSerializer, TeamSerializer, StadiumSerializer, MatchSerializer
 
-from .models import Location, Team, Stadium
+from .models import Location, Team, Stadium, Match
 
 class LocationViewSet(viewsets.ModelViewSet):
     queryset = Location.objects.all().order_by('city')
@@ -15,4 +15,12 @@ class StadiumViewSet(viewsets.ModelViewSet):
 
 class TeamViewSet(viewsets.ModelViewSet):
     queryset = Team.objects.all().order_by('-score')
+    #queryset = Team.objects.get(name = 'Barcelona')
     serializer_class = TeamSerializer
+
+
+class MatchViewSet(viewsets.ModelViewSet):
+    queryset = Match.objects.all().order_by('id')
+    serializer_class = MatchSerializer
+
+

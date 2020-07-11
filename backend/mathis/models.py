@@ -73,12 +73,12 @@ class Player(models.Model):
         return self.name
 
 class Tournament(models.Model):
-    identif = models.IntegerField(default=0, blank=True)
-    goal_scorer = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='scorer', default=None, blank=True)
-    goals = models.IntegerField(default=None, blank=True)
-    assistant = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='assist', default=None, blank=True)
-    assistances = models.IntegerField(default=None, blank=True)
-    fair_play = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='fair_play', default=None, blank=True)
+    identif = models.IntegerField(default=0, blank=True, null=True)
+    goal_scorer = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='scorer', default=None, blank=True, null=True)
+    goals = models.IntegerField(default=None, blank=True, null=True)
+    assistant = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='assist', default=None, blank=True, null=True)
+    assistances = models.IntegerField(default=None, blank=True, null=True)
+    fair_play = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='fair_play', default=None, blank=True, null=True)
     class Meta:
         ordering = ['id']
     def __int__(self):
