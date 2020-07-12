@@ -80,6 +80,11 @@ $sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
     background-color: white;
     position: relative;
     height: 35em;
+    overflow: scroll;
+}
+
+.main-home-menu::-webkit-scrollbar {
+    display: none;
 }
 
 .data-home-menu{
@@ -136,6 +141,7 @@ $sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
     margin-bottom: 9%;
     padding-bottom: .5%;
     padding-top: 3.5%;
+    //box-shadow: 8px 8px 16px rgba(165, 177, 198, 0.8), -8px -8px 16px rgba(255, 255, 255, 0.8);
 }
 
 table{

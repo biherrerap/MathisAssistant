@@ -65,9 +65,13 @@ $sq-img: url("https://image.freepik.com/free-vector/abstract-classic-blue-backgr
   padding-right: 10%;
 }
 
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
 
 html, body {
- // background-color: #F5F5F5;
+ // background-color: #f7f7f9;
  /*
   height: 100%;
   background:
