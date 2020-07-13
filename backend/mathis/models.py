@@ -94,7 +94,7 @@ class Match(models.Model):
     goals_team_ap = models.IntegerField(default=0)
     goals_team_bp = models.IntegerField(default=0)  
     phase_id = models.IntegerField(default=0)
-    group_id = models.IntegerField(default=0)
+    group_id = models.IntegerField(default=0)  
     dt = models.IntegerField(default=0)
     class Meta:
         verbose_name = 'Match'
